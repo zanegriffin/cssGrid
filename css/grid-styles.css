@@ -1,0 +1,156 @@
+/*  LAYOUT 1: TWO COLUMN  */
+#layout-one .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-gap: 10px;
+}
+
+#layout-one .container header{
+    grid-column: 1/3;
+
+}
+
+#layout-one .container main {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+    background-color: white;
+}
+
+#layout-one .container main aside section {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#layout-one .container footer {
+    grid-row: 3/4;
+    grid-column: 1/3;
+}
+
+/*  LAYOUT 2: THREE COLUMN */
+
+#layouts-two .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-gap: 10px;
+}
+
+#layouts-two .container header{
+    grid-column: 1/3;
+
+}
+
+#layouts-two .container main {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-gap: 10px;
+    background-color: white;
+}
+
+
+
+#layouts-two .container footer {
+    grid-row: 3/4;
+    grid-column: 1/3;
+}
+
+
+/*  LAYOUT 3: SIMPLE MARKETING  */
+
+#layouts-three .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+#layouts-three .container header {
+    grid-column: 1/3;
+}
+
+#layouts-three .container main {
+    grid-column: 1/3;
+    grid-row: 2/4;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 10px;
+    background-color: white;
+}
+
+#layouts-three .container main section:nth-child(3) {
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    background-color: white;
+}
+
+#layouts-three .container footer {
+    grid-column: 1/3;
+    grid-row: 4/5;
+}
+
+/* Simple Marketing Layout */
+
+/* Laptop */
+@media screen and (min-width: 1024px){
+    #layouts-four .container {
+    display: grid;
+    grid-template-rows: 1fr 4fr 2fr 1fr; 
+    grid-gap: 10px;
+    }
+
+    #layouts-four .container header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    grid-gap: 10px;
+    }
+
+    #layouts-four .container header nav {
+    grid-column: 3/4;
+    align-self: center;
+    display: inline-block;
+    }
+
+    #layouts-four .container main {
+        grid-row: 2/4;
+        display: grid;
+        grid-template-rows: 4fr 2fr;
+        grid-gap: 10px;
+    }
+
+    #layouts-four .container main section:first-child {
+        grid-row: 1/2;
+    }
+
+    #layouts-four .container main section:nth-child(2) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+
+}
+
+
+/* tablet */
+@media screen and (min-width: 768px) {
+
+
+
+}
+
+/* mobile  */
+
+#layouts-four .container {
+    display: grid;
+    grid-template-rows: 1fr 3fr 2fr 1fr;
+}
